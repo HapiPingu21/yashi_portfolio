@@ -14,8 +14,8 @@ export const portfolio = {
   about: 'A machine-learning mind with a content creator’s eye. I build explainable, reliable AI — while staying curious about the people who live with it.',
   aboutDetail: 'Currently completing an M.Sc. in Data & Knowledge Engineering at Otto von Guericke University Magdeburg. I’m especially drawn to responsible AI, NLP and clear stories hidden in complex information.',
   seeking: ['Working Student — AI / Data', 'AI Engineer Internship', 'Machine Learning Internship'],
-  photos: { hero: '/images/yash-nature.jpeg' },
-  video: '/images/yash-hero-video.mp4',
+  photos: { hero: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/yash-nature.jpeg` },
+  video: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/yash-hero-2d.mp4`,
   projects: [
     { number: '01', type: 'AI + OPERATIONS / 2026', title: 'NYC Citi Bike\nOperational Intelligence', description: '4.7M trips turned into demand forecasting and smarter station inventory.', theme: 'featured', icon: '♧' },
     { number: '02', type: 'RESPONSIBLE AI / 2025', title: 'AI Risk Assessment System', description: 'Interpretable NLP to surface contextual risk for non-technical teams.', theme: 'cyan', icon: '✦' },

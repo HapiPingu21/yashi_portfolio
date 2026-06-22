@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-};
+const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/yashi_portfolio' : '';
 
-export default nextConfig;
+export default {
+  output: 'export',
+  basePath,
+  assetPrefix: basePath,
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
+};
